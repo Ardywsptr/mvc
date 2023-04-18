@@ -1,0 +1,7 @@
+=== FLASH MESSAGE ===
+
+flash message adalah pesan kilat yang akan digunakan ketika telah selesai melakukan suatu aksi didalam CRUD MVC (tambah, hapus, ubah)
+
+flash message membutuhkan konsep variabel super global $_SESSION dan konsep static keyword 
+
+studi kasus : ketika data berhasil/gagal maka dapat pesan notifikasi, notifikasi ini akan tampil sekali saja ketika data nya berhasil/ gagal di tambahkan dan ketika berpindah halaman pesan notifikasi tersebut akan hilang 

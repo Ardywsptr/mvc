@@ -1,0 +1,3 @@
+=== DATABASE WRAPPER ===
+
+database wrapper merupakan pembungkus dari database -> class yang dapat mengelola database untuk data di model manapun -> tidak hanya mahasiswa

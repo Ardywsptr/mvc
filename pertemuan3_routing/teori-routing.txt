@@ -1,0 +1,38 @@
+=== ROUTING ===
+
+pretty url -> membuat url menjadi rapih
+
+file .htaccess yang ada di folder app berguna untuk blok akses ke folder atau file yang seharusnya tidak boleh diakses oleh user. seperti App.php, Controller.php, init.php dll -> user hanya boleh akses file index dan file-file yang ada di routing -> pada file .htaccess kita bisa konfigurasi server untuk folder ini. contoh :
+
+Options -indexes -> berguna untuk blok akses folder dan sub-sub folder app, selama didalam itu tidak ada file index maka jangan tampilkan isi foldernya
+
+file .htaccess yg ada pada folder public berguna untuk menghindari kesalahan atau ambigu ketika memanggil folder atau file yg ada pada folder public ini. contoh :
+
+Options -Multiviews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [L]
+
+RewriteEngine On = untuk mengaktifkan rewritenya
+
+RewriteCond %{REQUEST_FILENAME} !-d = jika url yang dituliskan folder maka di abaikan
+
+RewriteCond %{REQUEST_FILENAME} !-f = menghindari ketika ada nama file/folder yang sama dengan controller dan method kita
+
+RewriteRule = aturan untuk menulis ulang url nya 
+
+^ = akan membaca apapun yang ditulis url mulai dari awal, mulai dri awal disini yaitu folder public
+
+(.*)$ = ambil semua karakter apapun (kecuali enter) sampai habis
+
+index.php?url=$1 = arahkan ke file index.php yang berisi url 
+
+[L] = klo ada rule yang sudah terpenuhi, jangan jalankan rule lain setelah ini -> untuk menghindari orang yang ingin melakukan sesuatu yang jahat
+
+
+funtion php rtrim() berguna untuk menghapus tanda yang mau di hapus, disini "/" yang dihapus
+
+function php filter_var(string, FILTER_SANITIZE_URL) berguna untuk membersihkan url dari karakter-karakter yang ngaco atau yang mencurigakan sehingga karakter-karekter tersebut bisa untuk hack
+
+function php explode("delimiter", string) berguna untuk memecah string menjadi sebuah array

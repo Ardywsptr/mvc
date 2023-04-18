@@ -1,0 +1,40 @@
+=== MVC ===
+
+MVC (Model View Controler) merupakan arsitektur pada perancangan perangkat lunak berorientasi objek -> bisa diterapkan pada bahasa pemrograman apapun selama bahasa itu menerapkan oop
+
+
+tujuan dari MVC adalah memisahkan antara tampilan(View), data(Model) dan proses(Controler)->halaman->controler atau method default nya index
+
+
+kenapa MVC ?
+- organisasi dan struktur kode yang baik -> tempat menyimpan file, struktur kode dll
+- pemisahan logic dan tampilan 
+- mempermudah perawatan kode (maintenance)
+- implementasi konsep OOP yang sudah dipelajari
+- digunakan oleh bannyak WEB Aplication Framework
+
+
+Framework yang menggunakan MVC :
+- PHP        : CodeIgniter, Laravel, Yii, dll
+- Javascript : AngularJS, React JS, Backbone.js dll
+- Java       : Sprinng MVC, JSF, Stuts, dll
+- Python     : Django, CherryPy, dll
+- Ruby       : Ruby on Rails, Sinatra, dll
+
+Komponen dasar dari MVC :
+- Model : representasi pengetahuan -> mengelola data -> logika bisnis
+- Controller : perantara antara model dan view -> menangani pemrosesan pada aplikasi -> menangani aksi dari user
+- View : output, apa yang dilihat oleh user -> representasi visual dari model -> lapisan presentasi
+
+
+alur MVC yang ada pada CodeIgniter :
+index.php -> routing -> security -> application controller -> model, libraries, helpers, plugins, scripts -> view -> caching -> index.php
+
+alur MVC aplikasi yang akan dibuat :
+index.php -> routing -> application controller -> models -> view -> index.php
+
+
+TAHAPAN MEMBUAT MVC :
+- membuat view
+- membuat membuat method baru pada controller
+- membuat method baru pada model

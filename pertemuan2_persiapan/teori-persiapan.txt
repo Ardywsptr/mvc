@@ -1,0 +1,29 @@
+folder public -> berisi file-file yang akan di akses oleh user, yang paling utama yaitu file index.php, css, javascript, image
+
+
+folder app -> berisi folder dan file-file utama dari MVC, seperti core(untuk routing), controllers, view, model -> klo aplikasi lebih kompleks bisa ditambahkan library, helpers, plugins, scripts dll
+
+
+sub folder view -> berisi halaman yang di proses dari folder controller seperti home
+
+
+file utama yang akan diakses oleh user akan disimpan didalam public
+
+
+didalam index.php memanggil aplikasi mvc nya dengan init.php (bootsraping) yang ada di folder app, contoh :
+
+<?php
+require_once "../app/init.php";
+
+init.php (bootsraping) memanggil semua folder dan file yang dibutuhkan, isi dari init.php contohnya :
+
+<?php
+require_once "core./App.php";
+require_once "core./Controller.php";
+
+
+App.php dan Controller.php merupakan 2 class utama pembentuk MVC
+
+
+perbedaan class Controller.php pada folder core dengan class-class yang berada di folder Controllers adalah jika class Controller.php merupakan class utama dari class-class yang berada pada folder controllers. Sedangkan class-class yang berada pada folder Controllers merupakan class-class controller yang akan extend ke class utama (Contoller.php)-> Controller.php yang mengatur semua class yang ada di folder Controllers
+

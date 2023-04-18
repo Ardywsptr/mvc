@@ -1,0 +1,7 @@
+=== CONTROLLER ===
+
+urutan url = controller/method/parameter -> contoh : home/index/satu
+
+jika tidak menulis apapun (controller, method, parameter) pada url maka akan memanggil controller default yaitu ke index.php
+
+membuat controller dan method default

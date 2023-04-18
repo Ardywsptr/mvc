@@ -1,0 +1,9 @@
+=== UPDATE DATA ===
+
+update data menggunakan jquery dan ajax
+
+ajax merupakan teknologi yang membuat website menjadi interaktif yang membuat permintaan data atau request data nya terjadi disebagian elemen nya saja, tidak perlu reload 1 halaman
+
+fokus dari video kali ini yaitu mvc nya, tidak perlu membahas validasi dan keamanan web nya. itu akan lebih baik di bahas ketika sudah menggunakan framework.
+
+fungsi php json_encode berguna untuk mengubah array assoc menjadi json atau objek
