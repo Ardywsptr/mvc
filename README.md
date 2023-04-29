@@ -47,7 +47,7 @@ MVC (Model View Controler) merupakan pola arsitektur pada perancangan perangkat 
 
 <br clear="both">
 
-## Requierement :
+## Requirement :
 
 * **code editor**
 * **web server (apache)**
